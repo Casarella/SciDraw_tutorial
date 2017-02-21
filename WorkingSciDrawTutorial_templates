@@ -1,0 +1,99 @@
+(*Empty Canvas Example (FIGURE 2 from pdf)*)
+Figure[
+ FigurePanel[
+  {
+   
+   },
+  PlotRange -> {{0, 1}, {-10, 100}}
+  
+  ];,
+ CanvasSize -> 1.00*{4, 3}
+ ]
+
+(*First Level (FIGURE 3 from pdf)*) 
+Figure[
+ FigurePanel[
+  {
+   Lev[["162Dy_0gs"]][0, 1, 0];
+   },
+  PlotRange -> {{0, 1}, {-10, 100}}
+  
+  ];,
+ CanvasSize -> 1.00*{4, 3}
+ ]
+ 
+(*Second Level (FIGURE 4 from pdf)*)
+ Figure[
+ FigurePanel[
+  {
+   Lev[["162Dy_0gs"]][0, 1, 0];
+   Lev[["162Dy_2gs"]][0, 1, 80];
+   },
+  PlotRange -> {{0, 1}, {-10, 100}}
+  
+  ];,
+ CanvasSize -> 1.00*{4, 3}
+ ]
+
+ (*Transition Arrows (FIGURE 5 from pdf)*)
+  Figure[
+ FigurePanel[
+  {
+   Lev[["162Dy_0gs"]][0, 1, 0];
+   Lev[["162Dy_2gs"]][0, 1, 80];
+   Trans["162Dy_2gs",0.25,"162Dy_0gs",Automatic];
+   Trans["162Dy_2gs",0.50,"162Dy_0gs",0.75];
+   },
+  PlotRange -> {{0, 1}, {-10, 100}}
+  
+  ];,
+ CanvasSize -> 1.0*{4, 3}
+ ]
+ (*Labels (FIGURE 6 from pdf)*)
+   Figure[
+ FigurePanel[
+  {
+   Lev[["162Dy_0gs"]][0, 1, 0,LeftLabel->LabelJP[0,+1],RightLabel->"0"];
+   Lev[["162Dy_2gs"]][0, 1, 80,LeftLabel->LabelJP[2,+1]];
+   Trans["162Dy_2gs",0.25,"162Dy_0gs",Automatic,RightLabel->"Transition 1"];
+   Trans["162Dy_2gs",0.50,"162Dy_0gs",0.75,RightLabel->"Transition 2"];
+   BandLabel["162Dy_0gs",Isotope["162","Dy"],FontSize->24]
+   },
+  PlotRange -> {{0, 1}, {-30, 100}}
+  
+  ];,
+ CanvasSize -> 1.0*{4, 3}
+ ]
+ 
+  (*Labels (FIGURE 7 from pdf)*)
+   Figure[
+ FigurePanel[
+  {
+   Lev[["162Dy_0gs"]][0, 1, 0,LeftLabel->LabelJP[0,+1],RightLabel->"0",LineThickness->3,TextColor->LimeGreen];
+   Lev[["162Dy_2gs"]][0, 1, 80,LeftLabel->LabelJP[2,+1],LineColor->Red];
+   Trans["162Dy_2gs",0.25,"162Dy_0gs",Automatic,RightLabel->"Transition 1",ArrowType->Block];
+   Trans["162Dy_2gs",0.50,"162Dy_0gs",0.75,RightLabel->"Transition 2",LineColor->Blue,TextBackground->CadmiumYellow,RightTextNudge->{-20,30}];
+   BandLabel["162Dy_0gs",Isotope["162","Dy"],FontSize->24]
+   },
+  PlotRange -> {{0, 1}, {-30, 100}}
+  
+  ];,
+ CanvasSize -> 1.0*{4, 3}
+ ]
+ 
+   (*Labels (FIGURE 8 from pdf)*)
+   Figure[
+ FigurePanel[
+  {
+  SetOptions[Lev,FontSize->24,LeftTextNudge->{5,0}];
+   Lev[["162Dy_0gs"]][0, 1, 0,LeftLabel->LabelJP[0,+1],RightLabel->"0",LineThickness->3,TextColor->LimeGreen];
+   Lev[["162Dy_2gs"]][0, 1, 80,LeftLabel->LabelJP[2,+1],LineColor->Red];
+   Trans["162Dy_2gs",0.25,"162Dy_0gs",Automatic,RightLabel->"Transition 1",ArrowType->Block];
+   Trans["162Dy_2gs",0.50,"162Dy_0gs",0.75,RightLabel->"Transition 2",LineColor->Blue,TextBackground->CadmiumYellow,RightTextNudge->{-20,30}];
+   BandLabel["162Dy_0gs",Isotope["162","Dy"],FontSize->24]
+   },
+  PlotRange -> {{0, 1}, {-30, 100}},XFrame->False,YFrameLabel->"Excitation Energy (keV)"
+  
+  ];,
+ CanvasSize -> 1.0*{4, 3}
+ ]
